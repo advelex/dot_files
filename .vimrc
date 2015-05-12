@@ -79,6 +79,9 @@ set number
 "Run Python for F6
 autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 
+"Run PEP8 for current python file with F7
+autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
+
 "Make C-file
 autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make main<CR>
 
