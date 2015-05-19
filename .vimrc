@@ -76,6 +76,9 @@ set nobackup
 "show linenumber:
 set number
 
+" set text width to 79
+set tw=79
+
 "Run Python for F6
 autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 
@@ -96,10 +99,6 @@ autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!firefox "%:p"<CR>
 
 "Change Default colorscheme for txt filetype
 autocmd BufEnter *.txt colorscheme default
-autocmd BufEnter *.txt set tw=79
-
-" Default lenght for python
-autocmd BufEnter *.py set tw=79
 
 "moving between windows
 map <C-j> <C-W>j
