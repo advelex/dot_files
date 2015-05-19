@@ -153,3 +153,10 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " Recognition of markdown files with .md extension
 autocmd BufEnter *.md colorscheme molokai
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>i :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
