@@ -10,7 +10,7 @@ endif
 
 set background=dark
 "colorscheme solarized
-colorscheme inkpot
+colorscheme molokai
 
 "Backgroud <F3>=dark/<F4>=light
 nnoremap <F3> :set bg=dark<CR>:colorscheme solarized<CR>
@@ -151,7 +151,6 @@ nnoremap <Leader>0 :10b<CR>
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " Recognition of markdown files with .md extension
-autocmd BufEnter *.md colorscheme molokai
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 
