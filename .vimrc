@@ -2,15 +2,16 @@ set nocompatible
 filetype indent plugin on
 syntax on
 
+set background=dark
+
+colorscheme jellybeans
 
 if $COLORTERM == 'gnome-terminal'
       set t_Co=256
       let g:solarized_termcolors=256
+      colorscheme tomorrow
 endif
 
-set background=dark
-" colorscheme solarized
-colorscheme tomorrow
 
 " Backgroud <F3>=dark/<F4>=light
 nnoremap <F3> :set bg=dark<CR>:colorscheme solarized<CR>
