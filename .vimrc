@@ -86,16 +86,16 @@ autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 " Run PEP8 for current python file with F7
 autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
 
-" Make C-file
+" Make C-file with F6
 autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make main<CR>
 
-" Make and Run C-file
+" Make and Run C-file with F7
 autocmd FileType c nnoremap <silent> <F7> :w!<CR>:!make run-main<CR>
 
-" Make and Test C-file
+" Make and Test C-file with F8
 autocmd FileType c nnoremap <silent> <F8> :w!<CR>:!make run-test<CR>
 
-" Make and Test C-file
+" Open html file with firefox with F6
 autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!firefox "%:p"<CR>
 
 " Change Default colorscheme for txt filetype
