@@ -9,10 +9,10 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set background=dark
-"colorscheme solarized
-colorscheme molokai
+" colorscheme solarized
+colorscheme tomorrow
 
-"Backgroud <F3>=dark/<F4>=light
+" Backgroud <F3>=dark/<F4>=light
 nnoremap <F3> :set bg=dark<CR>:colorscheme solarized<CR>
 nnoremap <F4> :set bg=light<CR>
 
@@ -40,7 +40,7 @@ set showcmd
 " mapping of <C-L> below)
 set hlsearch
 
-"Search as you type what to search for :)
+" Search as you type what to search for :)
 set incsearch
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
@@ -69,62 +69,62 @@ set ruler
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
-"BACKUP
+" BACKUP
 set nobackup
 "set backupdir=~/.vim_backup
 
-"show linenumber:
+" show linenumber:
 set number
 
 " set text width to 79
 set tw=79
 
-"Run Python for F6
+" Run Python for F6
 autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 
-"Run PEP8 for current python file with F7
+" Run PEP8 for current python file with F7
 autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
 
-"Make C-file
+" Make C-file
 autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make main<CR>
 
-"Make and Run C-file
+" Make and Run C-file
 autocmd FileType c nnoremap <silent> <F7> :w!<CR>:!make run-main<CR>
 
-"Make and Test C-file
+" Make and Test C-file
 autocmd FileType c nnoremap <silent> <F8> :w!<CR>:!make run-test<CR>
 
-"Make and Test C-file
+" Make and Test C-file
 autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!firefox "%:p"<CR>
 
-"Change Default colorscheme for txt filetype
-autocmd BufEnter *.txt colorscheme default
+" Change Default colorscheme for txt filetype
+" autocmd BufEnter *.txt colorscheme default
 
-"moving between windows
+" moving between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"set sp default direction
+" set sp default direction
 set splitright
 set splitbelow
 
-"tabsettings
+" tabsettings
 set expandtab
 set smarttab                  " tab and backspace are smart
 set tabstop=4                 " 4 spaces
 set shiftwidth=4
-":retab" to re-tab the file your working on..
+" :retab" to re-tab the file your working on..
 
 " map control-backspace to delete the previous word
 imap <C-BS> <C-W>
 
-"Want a different map leader than \
+" Want a different map leader than \
 let mapleader = "\<Space>"
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
-"More indention on html
+" More indention on html
 let g:html_indent_inctags = "html,body,head,tbody"
 
 " Mappings to access buffers (don't use "\p" because a
