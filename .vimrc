@@ -19,7 +19,7 @@ nnoremap <F4> :set bg=light<CR>
 
 " Press F12 to switch to UTF-8 encoding
 nnoremap <F12> :e ++enc=utf-8<CR>
-nnoremap <F2> :e ++enc=latin1<CR>
+nnoremap <F11> :e ++enc=latin1<CR>
 
 " One such option is the 'hidden' option, which allows you to re-use the same
 " window and switch from an unsaved buffer without saving it first. Also allows
