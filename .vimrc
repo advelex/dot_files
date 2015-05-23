@@ -86,6 +86,12 @@ autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 " Run PEP8 for current python file with F7
 autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
 
+" Run GRIP for current markdown file with F6
+autocmd FileType markdown nnoremap <F6> :w!<CR>:!grip "%:p"<CR>
+
+" Run markdown-pdf for current markdown file with F7
+autocmd FileType markdown nnoremap <silent> <F7> :w!<CR>:!markdown-pdf -s ~/mdpdf.css "%:p"<CR>
+
 " Make C-file with F6
 autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make main<CR>
 
