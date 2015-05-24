@@ -178,3 +178,6 @@ set listchars=tab:▸\ ,eol:¬
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+" Edit .vimrc with <leader> + v
+nmap <leader>v :edit $MYVIMRC<CR>
