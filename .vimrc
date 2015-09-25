@@ -94,19 +94,20 @@ autocmd FileType markdown nnoremap <silent> <F7> :w!<CR>:!markdown-pdf -s ~/mdpd
 
 " C-FILES
 " Make C-file with F6
-autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make main<CR>
+autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make<CR>
 " Make and Run C-file with F7
-autocmd FileType c nnoremap <silent> <F7> :w!<CR>:!make run-main<CR>
+autocmd FileType c nnoremap <silent> <F7> :w!<CR>:!make run<CR>
 " Make and Test C-file with F8
 autocmd FileType c nnoremap <silent> <F8> :w!<CR>:!make run-test<CR>
 
 " CPP-FILES
 " Compile cpp-file with F6
-autocmd filetype cpp nnoremap <F6> :!g++ % -std=c++11 -ggdb -o %:r <CR>
+" autocmd filetype cpp nnoremap <F6> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r <CR>
+autocmd FileType cpp nnoremap <silent> <F6> :w!<CR>:!make main<CR>
 " Compile and run cpp-file with F7
-autocmd filetype cpp nnoremap<F7> :!g++ % -std=c++11 -ggdb -o %:r && ./%:r <CR><CR>
+autocmd filetype cpp nnoremap<F7> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r && ./%:r <CR><CR>
 " Compile and debug cpp-file with F8
-autocmd filetype cpp nnoremap<F10> :!g++ % -std=c++11 -ggdb -o %:r && gdb -tui %:r <CR>
+autocmd filetype cpp nnoremap<F10> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r && gdb -tui %:r <CR>
 
 " Open html file with firefox with F6
 autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!firefox "%:p"<CR>
