@@ -9,7 +9,7 @@ colorscheme jellybeans
 if $COLORTERM == 'gnome-terminal'
       set t_Co=256
       let g:solarized_termcolors=256
-      colorscheme molokai
+      " colorscheme molokai
 endif
 
 
