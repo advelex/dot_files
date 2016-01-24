@@ -80,6 +80,10 @@ set number
 " set text width to 79
 set tw=79
 
+" MATLAB FILES
+" Run on octave with F6
+autocmd FileType matlab nnoremap <silent> <F6> :w!<CR>:!octave -q "%:p"<CR>
+
 " PYTHON FILES
 " Run Python for F6
 autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
