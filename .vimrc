@@ -115,8 +115,11 @@ autocmd filetype cpp nnoremap<F7> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r 
 " Compile and debug cpp-file with F8
 autocmd filetype cpp nnoremap<F10> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r && gdb -tui %:r <CR>
 
-" Open html file with firefox with F6
-autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!firefox "%:p"<CR>
+" Open html file with web browser with F6
+autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!gnome-open "%:p"<CR>
+" Tabs to 2 spaces for html and htmldjango files
+autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype htmldjango setlocal expandtab tabstop=2 shiftwidth=2
 
 " Change Default colorscheme for txt filetype
 " autocmd BufEnter *.txt colorscheme default
@@ -180,6 +183,7 @@ nmap <leader>i :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " Source the vimrc file after saving it
 if has("autocmd")
