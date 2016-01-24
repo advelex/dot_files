@@ -89,6 +89,8 @@ autocmd FileType matlab nnoremap <silent> <F6> :w!<CR>:!octave -q "%:p"<CR>
 autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 " Run PEP8 for current python file with F7
 autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
+" Better python highlighting
+let python_highlight_all = 1
 
 " MARKDOWN FILES
 " Run GRIP for current markdown file with F6
