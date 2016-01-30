@@ -91,6 +91,8 @@ autocmd FileType python nnoremap <silent> <F6> :w!<CR>:!python3 "%:p"<CR>
 autocmd FileType python nnoremap <silent> <F7> :w!<CR>:!pep8 "%:p"<CR>
 " Better python highlighting
 let python_highlight_all = 1
+let python_highlight_space_errors = 0
+let python_highlight_indent_errors = 0
 
 " MARKDOWN FILES
 " Run GRIP for current markdown file with F6
