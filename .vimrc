@@ -13,9 +13,9 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 
-" Backgroud <F3>=dark/<F4>=light
-nnoremap <F3> :set bg=dark<CR>:colorscheme solarized<CR>
-nnoremap <F4> :set bg=light<CR>
+" Backgroud <F4>=dark/<F4>=light
+nnoremap <F4> :set bg=dark<CR>
+nnoremap <F3> :set bg=light<CR>
 
 " Press F12 to switch to UTF-8 encoding
 nnoremap <F12> :e ++enc=utf-8<CR>
