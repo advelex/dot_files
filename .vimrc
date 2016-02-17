@@ -212,3 +212,7 @@ if &term =~ "xterm"
     let &t_Sb = "\<Esc>[4%dm"
   endif
 endif
+
+" Gvim options
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
