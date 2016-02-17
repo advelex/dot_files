@@ -4,9 +4,7 @@ syntax on
 
 " Colorsceme options
 set background=dark
-
 colorscheme jellybeans
-
 if $COLORTERM == 'gnome-terminal'
       set t_Co=256
       let g:solarized_termcolors=256
