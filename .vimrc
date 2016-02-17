@@ -2,6 +2,7 @@ set nocompatible
 filetype indent plugin on
 syntax on
 
+" Colorsceme options
 set background=dark
 
 colorscheme jellybeans
@@ -11,6 +12,9 @@ if $COLORTERM == 'gnome-terminal'
       let g:solarized_termcolors=256
       " colorscheme molokai
 endif
+
+" Use systemclipboard by default
+set clipboard=unnamedplus
 
 
 " Backgroud <F4>=dark/<F4>=light
