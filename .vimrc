@@ -4,7 +4,7 @@ syntax on
 
 " Colorsceme options
 set background=dark
-colorscheme jellybeans
+colorscheme gruvbox
 if $COLORTERM == 'gnome-terminal'
       set t_Co=256
       let g:solarized_termcolors=256
