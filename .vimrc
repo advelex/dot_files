@@ -76,8 +76,9 @@ set laststatus=2
 set nobackup
 "set backupdir=~/.vim_backup
 
-" show linenumber:
+" show linenumber and relative linenumber
 set number
+set relativenumber
 
 " set text width to 79
 set tw=79
@@ -184,6 +185,8 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>i :set list!<CR>
+" Shorcut to toggle relative numbers
+nmap <leader>r :set rnu!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
