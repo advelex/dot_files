@@ -182,6 +182,9 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " Recognition of markdown files with .md extension
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
+" Recognition of markdown files with .md extension
+au BufNewFile,BufFilePre,BufRead *.asm set filetype=nasm
+
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>i :set list!<CR>
