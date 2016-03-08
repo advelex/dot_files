@@ -11,6 +11,9 @@ if $COLORTERM == 'gnome-terminal'
       " colorscheme molokai
 endif
 
+" Transparent backbround
+hi Normal ctermbg=none
+
 " Use systemclipboard by default
 set clipboard=unnamedplus
 
