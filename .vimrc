@@ -11,6 +11,23 @@ if $COLORTERM == 'gnome-terminal'
       " colorscheme molokai
 endif
 
+
+" Set space as leader-key
+let mapleader = "\<Space>"
+let g:EasyMotion_leader_key = '<Leader><Leader>'
+
+
+" Toggle color column
+nnoremap <leader>c :call ColorColumnToggle()<cr>
+function! ColorColumnToggle()
+    if &colorcolumn
+        setlocal colorcolumn=0
+    else
+        setlocal colorcolumn=80
+    endif
+endfunction
+
+
 " Transparent backbround
 hi Normal ctermbg=none
 
@@ -152,9 +169,6 @@ set shiftwidth=4
 " map control-backspace to delete the previous word
 imap <C-BS> <C-W>
 
-" Want a different map leader than \
-let mapleader = "\<Space>"
-let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 " More indention on html
 let g:html_indent_inctags = "html,body,head,tbody"
