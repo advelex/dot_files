@@ -247,13 +247,16 @@ nmap <leader>r :set rnu!<CR>
 set listchars=tab:▸\ ,eol:¬
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
+
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+
 " Edit .vimrc with <leader> + v
 nmap <leader>v :edit $MYVIMRC<CR>
+
 
 " Putty and 256 colors
 if &term =~ "xterm"
@@ -270,6 +273,7 @@ if &term =~ "xterm"
     let &t_Sb = "\<Esc>[4%dm"
   endif
 endif
+
 
 " Gvim options
 set guioptions-=T  "remove toolbar
