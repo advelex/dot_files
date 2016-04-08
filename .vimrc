@@ -2,6 +2,7 @@ set nocompatible
 filetype indent plugin on
 syntax on
 
+
 " Colorsceme options
 set background=dark
 colorscheme gruvbox
@@ -31,17 +32,38 @@ endfunction
 " Transparent backbround
 hi Normal ctermbg=none
 
+
 " Use systemclipboard by default
 set clipboard=unnamedplus
 
 
-" Backgroud <F4>=dark/<F4>=light
-nnoremap <F4> :set bg=dark<CR>
-nnoremap <F3> :set bg=light<CR>
+" Toggle Background with <F4>
+nnoremap <F4> :call BackgroundColorToggle()<CR>
+let g:background_toggling = 1
+function! BackgroundColorToggle()
+    if g:background_toggling
+        set bg=light
+        let g:background_toggling = 0
+    else
+        set bg=dark
+        let g:background_toggling = 1
+    endif
+endfunction
 
-" Press F12 to switch to UTF-8 encoding
-nnoremap <F12> :e ++enc=utf-8<CR>
-nnoremap <F11> :e ++enc=latin1<CR>
+
+" Toggle encoding between UTF-8 and latin1 with <F12>
+nnoremap <F12> :call EncodingToggle()<CR>
+let g:encoding_toggling = 1
+function! EncodingToggle()
+    if g:encoding_toggling
+        e ++enc=latin1
+        let g:encoding_toggling = 0
+    else
+        e ++enc=utf-8
+        let g:encoding_toggling = 1
+    endif
+endfunction
+
 
 " One such option is the 'hidden' option, which allows you to re-use the same
 " window and switch from an unsaved buffer without saving it first. Also allows
@@ -100,12 +122,10 @@ set nobackup
 set number
 set relativenumber
 
-" set text width to 79
-set tw=79
-
 " MATLAB FILES
 " Run on octave with F6
 autocmd FileType matlab nnoremap <silent> <F6> :w!<CR>:!octave -q "%:p"<CR>
+
 
 " PYTHON FILES
 " Run Python for F6
@@ -117,11 +137,13 @@ let python_highlight_all = 1
 let python_highlight_space_errors = 0
 let python_highlight_indent_errors = 0
 
+
 " MARKDOWN FILES
 " Run GRIP for current markdown file with F6
 autocmd FileType markdown nnoremap <F6> :w!<CR>:!grip "%:p"<CR>
 " Run markdown-pdf for current markdown file with F7
 autocmd FileType markdown nnoremap <silent> <F7> :w!<CR>:!markdown-pdf -s ~/mdpdf.css "%:p"<CR>
+
 
 " C-FILES
 " Make C-file with F6
@@ -130,6 +152,7 @@ autocmd FileType c nnoremap <silent> <F6> :w!<CR>:!make<CR>
 autocmd FileType c nnoremap <silent> <F7> :w!<CR>:!make run<CR>
 " Make and Test C-file with F8
 autocmd FileType c nnoremap <silent> <F8> :w!<CR>:!make run-test<CR>
+
 
 " CPP-FILES
 " Compile cpp-file with F6
@@ -140,14 +163,17 @@ autocmd filetype cpp nnoremap<F7> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r 
 " Compile and debug cpp-file with F8
 autocmd filetype cpp nnoremap<F10> :!g++ % -std=c++11 -Wall -Wextra -ggdb -o %:r && gdb -tui %:r <CR>
 
+
 " Open html file with web browser with F6
 autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!gnome-open "%:p"<CR>
 " Tabs to 2 spaces for html and htmldjango files
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype htmldjango setlocal expandtab tabstop=2 shiftwidth=2
 
+
 " Change Default colorscheme for txt filetype
 " autocmd BufEnter *.txt colorscheme default
+
 
 " moving between windows
 map <C-j> <C-W>j
@@ -155,9 +181,11 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+
 " set sp default direction
 set splitright
 set splitbelow
+
 
 " tabsettings
 set expandtab
@@ -166,12 +194,14 @@ set tabstop=4                 " 4 spaces
 set shiftwidth=4
 " :retab" to re-tab the file your working on..
 
+
 " map control-backspace to delete the previous word
 imap <C-BS> <C-W>
 
 
 " More indention on html
 let g:html_indent_inctags = "html,body,head,tbody"
+
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -193,20 +223,25 @@ nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
+
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
 
 " Recognition of markdown files with .md extension
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
+
 " Recognition of markdown files with .md extension
 au BufNewFile,BufFilePre,BufRead *.asm set filetype=nasm
+
 
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>i :set list!<CR>
 " Shorcut to toggle relative numbers
 nmap <leader>r :set rnu!<CR>
+
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
