@@ -18,13 +18,24 @@ let mapleader = "\<Space>"
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 
-" Toggle color column
+" Toggle color column with [leader c]
 nnoremap <leader>c :call ColorColumnToggle()<cr>
 function! ColorColumnToggle()
     if &colorcolumn
         setlocal colorcolumn=0
     else
         setlocal colorcolumn=80
+    endif
+endfunction
+
+
+" Toggle text width with [leader t]
+nnoremap <leader>t :call TextWidthToggle()<cr>
+function! TextWidthToggle()
+    if &textwidth
+        setlocal textwidth=0
+    else
+        setlocal textwidth=79
     endif
 endfunction
 
