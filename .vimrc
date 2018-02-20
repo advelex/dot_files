@@ -289,3 +289,7 @@ endif
 " Gvim options
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
+
+" Disable bell and visual bell
+set visualbell
+set t_vb=
