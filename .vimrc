@@ -41,7 +41,7 @@ endfunction
 
 
 " Transparent backbround
-hi Normal ctermbg=none
+" hi Normal ctermbg=none
 
 
 " Use systemclipboard by default
