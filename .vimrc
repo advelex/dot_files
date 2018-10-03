@@ -5,7 +5,7 @@ syntax on
 
 " Colorsceme options
 set background=dark
-colorscheme gruvbox
+colorscheme Iosvkem
 if $COLORTERM == 'gnome-terminal'
       set t_Co=256
       let g:solarized_termcolors=256
