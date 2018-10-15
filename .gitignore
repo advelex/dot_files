@@ -1,5 +1,2 @@
-/*
-!.gitignore
-!.vimrc
-!/.vim
+*.swp
 .vim/.netrwhist
