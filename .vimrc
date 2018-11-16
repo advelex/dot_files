@@ -15,8 +15,6 @@ endif
 
 " Set space as leader-key
 let mapleader = "\<Space>"
-let g:EasyMotion_leader_key = '<Leader><Leader>'
-
 
 " Toggle color column with [leader c]
 nnoremap <leader>c :call ColorColumnToggle()<cr>
