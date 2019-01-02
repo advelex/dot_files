@@ -185,6 +185,7 @@ autocmd FileType html nnoremap <silent> <F6> :w!<CR>:!gnome-open "%:p"<CR>
 " Tabs to 2 spaces for html and htmldjango files
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype htmldjango setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 
 
 " Change Default colorscheme for txt filetype
