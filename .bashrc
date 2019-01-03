@@ -7,6 +7,9 @@ if [ -f /etc/bashrc ]; then
       . /etc/bashrc   # --> Read /etc/bashrc, if present.
 fi
 
+# Use vi style editing in terminal
+set -o vi
+
 # Some aliases
 alias octave='octave --no-window'
 
