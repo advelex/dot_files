@@ -8,7 +8,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Use vi style editing in terminal
-set -o vi
+# set -o vi
 
 # Some aliases
 alias octave='octave --no-window'
