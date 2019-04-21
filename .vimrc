@@ -19,6 +19,9 @@ let mapleader = "\<Space>"
 " fuzzy path search
 set path+=**
 
+" Create the 'tags' file (ctags needs to be installed on OS)
+command! MakeTags !ctags -R .
+
 " Toggle color column with [leader c]
 nnoremap <leader>c :call ColorColumnToggle()<cr>
 function! ColorColumnToggle()
