@@ -16,6 +16,9 @@ endif
 " Set space as leader-key
 let mapleader = "\<Space>"
 
+" fuzzy path search
+set path+=**
+
 " Toggle color column with [leader c]
 nnoremap <leader>c :call ColorColumnToggle()<cr>
 function! ColorColumnToggle()
