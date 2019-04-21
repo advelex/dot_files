@@ -16,7 +16,7 @@ endif
 " Set space as leader-key
 let mapleader = "\<Space>"
 
-" fuzzy path search
+" Fuzzy path search
 set path+=**
 
 " Create the 'tags' file (ctags needs to be installed on OS)
