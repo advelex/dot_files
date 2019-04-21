@@ -249,7 +249,7 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 
-" Recognition of markdown files with .md extension
+" Recognition of asm files with .asm extension
 au BufNewFile,BufFilePre,BufRead *.asm set filetype=nasm
 
 
