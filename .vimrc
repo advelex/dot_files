@@ -196,10 +196,10 @@ autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 
 
 " moving between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 
 " set sp default direction
