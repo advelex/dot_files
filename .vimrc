@@ -23,6 +23,7 @@ Plug 'tomasiser/vim-code-dark'
 " Essential
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 
