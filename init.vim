@@ -91,8 +91,9 @@ nnoremap <Leader>3 :3b<CR>
 
 " Terminal mode spesific mappings
 
-" To map <Esc> to exit terminal-mode
-tnoremap <Esc> <C-\><C-n>
+" Mapping to exit terminal-mode
+" tnoremap <Esc> <C-\><C-n>
+tnoremap <A-n> <C-\><C-n>
 
 " To simulate |i_CTRL-R| in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
