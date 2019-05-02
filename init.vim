@@ -53,11 +53,15 @@ set hidden
 set splitright
 set splitbelow
 
+" Smart case when sarching.
+set ignorecase
+set smartcase
+
 " tabsettings
 set expandtab
 set tabstop=4                 " 4 spaces
 set shiftwidth=4
-" :retab" to re-tab the file your working on..
+" :retab to re-tab the file your working on..
 
 " Set clipboard
 set clipboard+=unnamedplus
