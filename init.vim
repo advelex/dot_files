@@ -49,7 +49,7 @@ set relativenumber  " as relative numbers
 " Allow unsaved buffers
 set hidden
 
-" set sp default direction
+" Set sp default direction
 set splitright
 set splitbelow
 
@@ -57,7 +57,7 @@ set splitbelow
 set ignorecase
 set smartcase
 
-" tabsettings
+" Tabsettings
 set expandtab
 set tabstop=4                 " 4 spaces
 set shiftwidth=4
@@ -66,7 +66,7 @@ set shiftwidth=4
 " Set clipboard
 set clipboard+=unnamedplus
 
-" see non-visible chars better
+" See non-visible chars better
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
 
 
@@ -91,13 +91,13 @@ nnoremap <Leader>3 :3b<CR>
 
 " Terminal mode spesific mappings
 
-" to map <Esc> to exit terminal-mode
+" To map <Esc> to exit terminal-mode
 tnoremap <Esc> <C-\><C-n>
 
-" to simulate |i_CTRL-R| in terminal-mode
+" To simulate |i_CTRL-R| in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-" movement in terminal
+" Movement in terminal
 tnoremap <C-h> <C-\><C-N><C-w>h
 tnoremap <C-j> <C-\><C-N><C-w>j
 tnoremap <C-k> <C-\><C-N><C-w>k
@@ -151,9 +151,9 @@ let g:ale_linters = {
   \ 'python': ['pycodestyle', 'pylint'] ,
   \ }
 " let g:ale_enabled = 0
-" dont check when at start
+" Dont check when at start
 let g:ale_lint_on_enter = 0
-" check only after save
+" Check only after save
 let g:ale_lint_on_text_changed = 'never'
 nnoremap <Leader>j :ALEToggle<CR>
 
@@ -193,7 +193,7 @@ function! LightlineFilename()
 		let parent = name
 		if  i == len(subs)
 			let name = parent . '/' . s
-        " uncomment below for full first directory name
+        " Uncomment below for full first directory name
 		" elseif i == 1
 		" 	let name = s
 		else
