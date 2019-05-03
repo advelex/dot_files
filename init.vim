@@ -47,6 +47,9 @@ colorscheme onedark
 set number
 set relativenumber  " as relative numbers
 
+" No numbers in terminal
+autocmd TermOpen * setlocal nonumber norelativenumber
+
 " Allow unsaved buffers
 set hidden
 
