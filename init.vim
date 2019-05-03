@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 " Enhancements
+Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'w0rp/ale'
 
