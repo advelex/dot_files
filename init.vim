@@ -34,10 +34,12 @@ Plug 'w0rp/ale'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+
+" BASIC SETTINGS
+
 " Set learder key to space
 let mapleader = "\<Space>"
 
-" 
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Colorscheme options
@@ -92,9 +94,6 @@ nnoremap <Leader>1 :1b<CR>
 nnoremap <Leader>2 :2b<CR>
 nnoremap <Leader>3 :3b<CR>
 
-
-" Terminal mode spesific mappings
-
 " Mapping to exit terminal-mode
 " tnoremap <Esc> <C-\><C-n>
 tnoremap <A-n> <C-\><C-n>
@@ -114,7 +113,6 @@ tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
 tnoremap <A-l> <C-\><C-N><C-w>l
 
-
 " Shortcut to rapidly toggle `set list`
 nnoremap <leader>i :set list!<CR>
 
@@ -123,6 +121,7 @@ nnoremap <leader>r :set relativenumber!<CR>
 
 " Edit .vimrc with <leader> + v
 nmap <leader>v :edit $MYVIMRC<CR>
+
 
 " CUSTOM COMMANDS
 
