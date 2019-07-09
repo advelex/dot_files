@@ -145,6 +145,14 @@ function! ColorColumnToggle()
 endfunction
 
 
+" FILETYPE SPESIFIC SETTINGS
+
+" tabstop at 2 spaces
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+
+
 " PLUGIN SETTINGS
 
 " Map fuzzy finder to [leader p]
