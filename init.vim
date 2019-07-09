@@ -72,6 +72,9 @@ set shiftwidth=4
 " Set clipboard
 set clipboard+=unnamedplus
 
+" Fuzzy path search
+set path+=**
+
 " See non-visible chars better
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
 
