@@ -162,11 +162,11 @@ nnoremap <Leader>p :CtrlP<CR>
 let g:ale_linters = {
   \ 'python': ['pycodestyle', 'pylint'] ,
   \ }
-" let g:ale_enabled = 0
+let g:ale_enabled = 0
 " Dont check when at start
-let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_enter = 0
 " Check only after save
-let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_text_changed = 'never'
 nnoremap <Leader>j :ALEToggle<CR>
 
 " Lightline settings
