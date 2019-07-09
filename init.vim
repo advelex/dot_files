@@ -216,4 +216,6 @@ function! LightlineFilename()
   return name
 endfunction
 
-
+" Semshi settings
+" let g:semshi#error_sign = 1
+let g:semshi#error_sign_delay = 5.0
