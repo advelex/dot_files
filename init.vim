@@ -1,9 +1,4 @@
-" Automatically install and load Vim-Plug and plugins
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" Note if plugins missing run :PlugInstall
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.local/share/nvim/plugged')
